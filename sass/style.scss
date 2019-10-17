@@ -5,154 +5,172 @@ body {
   line-height: 1.6;
   color: #333;
 }
-*,
-*:before,
-*:after {
+
+* {
   box-sizing: border-box;
 }
-h1 , h2, h3, h4, h5, h6 {
-  margin: 0;
+
+button {
+  &:active {
+    outline: none;
+  }
 }
-hr {
-  border: 0;
-  background-color: #e5e5e5;
-  height: 1px;
-  width: 100%;
-  display: block;
-  margin: 40px 0;
-}
+
 /* Header */
 header {
-  padding-top:20px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-
-  background: url("../img/header__bg.jpg"), center no-repeat;
-
-  --webkit-background-size: cover;
-  background-size: cover; max-width: 100%; height: auto;
-}
-.header__inner {
   display: flex;
-  margin: 0 100px 0 130px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 600px;
+  padding-top: 20px;
+  background: url("../img/header__bg.jpg"), center no-repeat;
+  background-size: cover;
+}
+
+.header__inner {
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .header__logo {
   color: white;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 400;
-
 }
+
 .header__nav {
   display: flex;
   align-items: center;
 }
+
 .header__item {
-  padding-left: 20px;
-  font-size: 28px;
+  margin-left: 20px;
+  font-size: 16px;
 
-        button {
-           padding: 15px 45px;
-           font-size: 28px;
-           background-color: transparent;
-           border-radius: 10px;
-           border: 0;
-           color: white;
-           font-family: 'Montserrat', sans-serif;
-         }
+  button {
+    color: white;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px 35px;
+    border-radius: 10px;
+    border: 0;
+    background-color: transparent;
+
+    &:hover {
+      background-color: #0aaee4;
+      border-color: #0aaee4;
+      transition: background-color 0.3s linear,
+      color 0.3s linear;
+      cursor: pointer;
+    }
+  }
 }
-.header__btn:hover {
-  background-color: #0aaee4;
-  border-color: #0aaee4;
-  transition: background-color 0.5s linear,
-  color 0.5s linear;
-  cursor: pointer;
-}
+
 .header__search {
-  color:white;
+  color: white;
 }
-.header__search:hover  {
-  color: #0aaee4;
-  cursor: pointer;
-  transition:  color 0.5s linear;
-}
-/* Header info */
- .header__info {
-   margin: 700px 0 50px 130px;
-   color:#fff;
 
- }
- .film__name {
-   font-size:60px;
- }
+.header__search {
+  &:hover {
+    color: #0aaee4;
+    cursor: pointer;
+    transition: color 0.3s linear;
+  }
+}
+
+/* Header info */
+.header__info {
+  color: #fff;
+}
+
+.film__name {
+  font-size: 40px;
+}
+
 .film__genre {
   display: flex;
-  margin: 0 0 40px 10px;
-  font-size: 24px;
+  margin: 0 0 20px 10px;
+  font-size: 18px;
 }
+
 .genre {
-  padding-right: 30px;
+  padding-right: 25px;
 }
 
 .film__rate {
   display: flex;
   align-items: center;
-    a {
-      padding-right: 10px;
-      font-size: 25px;
-      color: #0aaee4;
-    }
+
+  a {
+    padding-right: 10px;
+    font-size: 25px;
+    color: #0aaee4;
   }
+}
+
 .rate {
   border: 2px solid #0aaee4;
   padding: 1px 5px;
   border-radius: 10px;
 }
-.rate:hover {
-  background-color: white;
-  color: #0aaee4;
-  font-weight: 700;
-  cursor: pointer;
-  transition: color 0.5s linear, background-color 0.2s linear;
+
+.rate {
+  &:hover {
+    background-color: white;
+    color: #0aaee4;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s linear, background-color 0.2s linear;
+  }
 }
 
-.gerne--border:after  {
-  content: "";
-  border-right: 3px solid white;
-  height: 25px;
-  margin-left:35px;
+.gerne--border {
+  &:after {
+    content: "";
+    border-right: 3px solid white;
+    height: 25px;
+    margin-left: 35px;
+  }
 }
 
 .header__infos {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto 50px;
+  padding: 0 15px;
 }
 
 .header__menu {
-  display:flex;
-  margin: 830px 40px 0 0 ;
-
-    button{
-      padding: 15px 45px;
-      font-size: 28px;
+  display: flex;
+  align-items: center;
+  .header__item {
+    .btn__menu {
+      padding: 10px 15px;
+      font-size: 16px;
       background-color: transparent;
       border-radius: 10px;
       border: 1px solid white;
       color: white;
       font-family: 'Montserrat', sans-serif;
+
+      &:hover {
+        background-color: #0aaee4;
+        border-color: #0aaee4;
+        transition: background-color 0.3s linear,
+        color 0.3s linear;
+        cursor: pointer;
       }
-}
-.btn__menu:hover {
-  background-color: #0aaee4;
-  border-color: #0aaee4;
-  transition: background-color 0.5s linear,
-  color 0.5s linear;
-  cursor: pointer;
+    }
+  }
 }
 
 /* Content*/
